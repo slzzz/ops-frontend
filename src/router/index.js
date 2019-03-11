@@ -18,10 +18,21 @@ import TableBasic from '@/views/table/basic'
 import TableEdit from '@/views/table/edit'
 import TableDynamic from '@/views/table/dynamic'
 
+import AssetManagement from '@/views/assetmanagement'
+
+import Ansible from '@/views/autodeploy/ansible'
+
+import Docker from '@/views/docker'
+
+
 
 export const routes = [
 
   { path: '/dashboard', component: Dashboard },
+  { path: '/assetmanagement', component: AssetManagement },
+  { path: '/autodeploy/ansible', component: Ansible },
+  { path: '/docker', component: Docker },
+
   { path: '/chart/line', component: LineChart },
   { path: '/chart/keyboard', component: Keyboard },
   { path: '/chart/mixchart', component: Mixchart },

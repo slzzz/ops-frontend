@@ -1,8 +1,13 @@
 export const menus = [
   { path: '/dashboard', title: '首页', icon: 'home' },
   { path: '/assetmanagement', title: '资产管理', icon: 'database' },
-  { path: '/assetmanagement2', title: '自动部署', icon: 'deployment-unit' },
-  { path: '/assetmanagement3', title: 'Docker', icon: 'cloud' },
+  {
+    path: '/autodeploy', title: '自动部署', icon: 'deployment-unit' ,
+    children: [
+      {path: '/autodeploy/ansible', title: 'ansible', icon: 'deployment'},
+    ],
+  },
+  { path: '/docker', title: 'Docker', icon: 'cloud' },
   { path: '/assetmanagement4', title: 'Slack', icon: 'slack' },
   { path: '/assetmanagement5', title: 'Heroku', icon: 'appstore' },
   { path: '/assetmanagement6', title: 'Monitor', icon: 'alert' },
