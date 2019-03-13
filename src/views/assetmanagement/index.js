@@ -33,6 +33,10 @@ class TableEdit extends Component {
       {
         title: 'Id',
         dataIndex: 'id',
+        width: '5%'
+      }, {
+        title: 'IP',
+        dataIndex: 'ip',
         render: (name,row,index) => {
           const editable = this.state.editable
           return (
@@ -42,7 +46,7 @@ class TableEdit extends Component {
                     onChange={
                       this.changInputVal.bind(this,index)
                     }
-                    style={{width:'60%',marginRight:10}}
+                    style={{width:'80%',marginRight:10}}
                     type='text'
                     value={this.state.editValue[index]}
                 />
@@ -56,10 +60,6 @@ class TableEdit extends Component {
             )
           )
         },
-        width: '5%'
-      }, {
-        title: 'IP',
-        dataIndex: 'ip',
         width: '12%',
       }, {
         title: 'MODEL',
@@ -137,8 +137,8 @@ class TableEdit extends Component {
   setEditable(index){
     const newEditable= [...this.state.editable],newEditValue = [...this.state.editValue],name = this.state.data[index].name
 
-    newEditValue.splice(index,2,name)
-    newEditable.splice(index,2,true)
+    newEditValue.splice(index,1,name)
+    newEditable.splice(index,1,true)
 
     this.setState({editable:newEditable,editValue:newEditValue})
   }

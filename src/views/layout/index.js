@@ -17,12 +17,11 @@ class LayoutComponent extends Component {
     // 节流函数
     window.onresize = debounce(this.getClientWidth, 100)
   }
-
   getClientWidth = () => {
     // 通过context上下文拿到store的dispatch事件,发起action修改store状态树
     const { changeCollapsed,changeIsMobile } = this.props, clientWidth = document.body.clientWidth;
     changeIsMobile(clientWidth <= 992)
-    changeCollapsed(clientWidth <= 992)
+    changeCollapsed(clientWidth <= 92)
     console.log(`当前屏幕宽度：${clientWidth}`)
   }
   render () {

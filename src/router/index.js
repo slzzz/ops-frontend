@@ -21,7 +21,7 @@ import TableDynamic from '@/views/table/dynamic'
 import AssetManagement from '@/views/assetmanagement'
 
 import Ansible from '@/views/autodeploy/ansible'
-
+import Deploy from '@/views/autodeploy/deploy'
 import Docker from '@/views/docker'
 
 
@@ -31,6 +31,7 @@ export const routes = [
   { path: '/dashboard', component: Dashboard },
   { path: '/assetmanagement', component: AssetManagement },
   { path: '/autodeploy/ansible', component: Ansible },
+  { path: '/autodeploy/deploy', component: Deploy },
   { path: '/docker', component: Docker },
 
   { path: '/chart/line', component: LineChart },

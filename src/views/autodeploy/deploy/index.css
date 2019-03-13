@@ -1,0 +1,26 @@
+.App {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.Output {
+    text-align: left;
+    height: 80vh;
+    background: black;
+    color:#A6FFA6;
+    OVERFLOW-Y: auto;
+    OVERFLOW-X:hidden;
+    padding-left: 10px;
+
+}
+
+
+p {
+    color: green;
+    font-size: medium;
+    padding: 0px  3px;
+}
+.tree{
+    text-align:  left;
+}
