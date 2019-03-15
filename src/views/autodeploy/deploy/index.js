@@ -33,8 +33,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      checkedKeys: [],
       autoExpandParent: true,
       selectedKeys: [],
+      output: ''
     }
   }
   //   componentWillMount(){
@@ -77,12 +79,30 @@ class App extends Component {
 
 
   _click = () => {
-    console.log(this.state.checkedKeys)
+    var data =  this.state.checkedKeys
+    if (data.includes('dam') && data.includes('bim'))
+    {
+      console.log('all')
+      this.setState({
+        output: 'Deploying All, Please waiting!!!'
+      })
+    }
+    else if (data.includes('dam'))
+    {
+      console.log('all dam')
+    }else if (data.includes('bim'))
+    {
+      console.log('all bim')
+    }else
+    {
+      console.log('other')
+    }
   }
 
   render() {
     return (
       <div className="App">
+
         <h1>Modelo Converter Auto Deploy</h1>
         <Tree
             autoExpandParent={this.state.autoExpandParent}
@@ -98,13 +118,15 @@ class App extends Component {
           {this.renderTreeNodes(treeData)}
         </Tree>
 
-
+        <div className="bto">
         <Button
             onClick={this._click}
             type="primary"
         >
-          Run
+          Deploy
         </Button>
+        </div>
+
         <div
             className="Output"
             dangerouslySetInnerHTML={{ __html: this.state.output }}

@@ -5,6 +5,7 @@ h1{
     text-align: center;
 }
 .Output {
+    padding-top: 10px;
     text-align: left;
     height: 80vh;
     background: black;
@@ -23,4 +24,7 @@ p {
 }
 .tree{
     text-align:  left;
+}
+.bto {
+    padding: 3px;
 }

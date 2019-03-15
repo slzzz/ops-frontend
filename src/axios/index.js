@@ -3,7 +3,7 @@ import store from '@/redux/store'
 import {message} from 'antd'
 const api = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
-  timeout: 15000
+  timeout: 50000
 })
 
 //请求拦截

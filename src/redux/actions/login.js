@@ -18,6 +18,11 @@ const login = params => dispatch => {
         localStorage.setItem('token', res.data.datas.token)
       }
       reslove(res.data.success)
+    }).catch(function (error) {
+      if(error.response.status == 401){
+        localStorage.clear()
+      }
+      console.log(JSON.stringify(error))
     })
   })
 }

@@ -6,16 +6,16 @@ import styles from '../index.module.less'
 const PanelGroup = props => {
   const chartList = [
     {
-      type: 'NewVisits',
-      className: 'people',
-      icon: 'user-add',
-      num: 10,
+      type: 'Project',
+      className: 'project',
+      icon: 'project',
+      num: 2,
       color: '#BFA3A9'
     }, {
       type: 'Messages',
       className: 'message',
       icon: 'message',
-      num: 12,
+      num: 1,
       color: '#5DA0F0'
     }, {
       type: 'Users',
@@ -24,11 +24,11 @@ const PanelGroup = props => {
       num: 2,
       color: '#BF6883'
     }, {
-      type: 'Shoppings',
-      className: 'shoppingCard',
-      icon: 'shopping-cart',
-      num: 29600,
-      color: '#f6ab40'
+      type: 'Containers',
+      className: 'Containers',
+      icon: 'bars',
+      num: 2,
+      color: '#0000FF'
     }
   ]
 
