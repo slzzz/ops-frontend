@@ -14,7 +14,7 @@ class Dashboard extends Component {
   }
 
   handleSetLineChartData = type => {
-    this.setState({lineChartDataVal: lineChartData['node1']})
+    this.setState({lineChartDataVal: lineChartData['type']})
   }
 
   render() {
