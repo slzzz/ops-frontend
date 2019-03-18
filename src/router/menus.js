@@ -11,7 +11,7 @@ export const menus = [
   { path: '/docker', title: 'Docker', icon: 'cloud' },
   { path: '/assetmanagement4', title: 'Slack', icon: 'slack' },
   { path: '/assetmanagement5', title: 'Heroku', icon: 'appstore' },
-  { path: '/assetmanagement6', title: 'Monitor', icon: 'alert' },
+  { path: '/monitor', title: 'Monitor', icon: 'alert' },
   // {
   //   path: '/chart', title: '图表', icon: 'area-chart',
   //   children: [

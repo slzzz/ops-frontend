@@ -59,7 +59,7 @@ class LineChart extends Component {
   }
 
 
-  setOptions({ expectedData, actualData } = {}) {
+  setOptions({ node1, node2 } = {}) {
       this.state.chart.setOption({
         backgroundColor: '#fff',
         xAxis: {
@@ -89,10 +89,10 @@ class LineChart extends Component {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['node1', 'node2']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: 'node1', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -103,12 +103,12 @@ class LineChart extends Component {
           },
           smooth: true,
           type: 'line',
-          data: expectedData,
+          data: node1,
           animationDuration: 2800,
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: 'node2',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -123,7 +123,7 @@ class LineChart extends Component {
               }
             }
           },
-          data: actualData,
+          data: node2,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
         }]

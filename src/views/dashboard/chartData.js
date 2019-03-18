@@ -236,7 +236,7 @@ const pieChartData = {
 
 const lineChartData = {
   NewVisits: {
-    expectedData: [
+    node1: [
       100,
       120,
       161,
@@ -245,7 +245,7 @@ const lineChartData = {
       160,
       165
     ],
-    actualData: [
+    node2: [
       120,
       82,
       91,

@@ -23,6 +23,7 @@ import AssetManagement from '@/views/assetmanagement'
 import Ansible from '@/views/autodeploy/ansible'
 import Deploy from '@/views/autodeploy/deploy'
 import Docker from '@/views/docker'
+import Monitor from '@/views/monitor'
 
 
 
@@ -33,6 +34,7 @@ export const routes = [
   { path: '/autodeploy/ansible', component: Ansible },
   { path: '/autodeploy/deploy', component: Deploy },
   { path: '/docker', component: Docker },
+  { path: '/monitor', component: Monitor }, 
 
   { path: '/chart/line', component: LineChart },
   { path: '/chart/keyboard', component: Keyboard },
