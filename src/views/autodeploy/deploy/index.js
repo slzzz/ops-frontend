@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from 'antd/lib/button'
 import { Tree } from 'antd';
 import './index.css';
-import api from '@/axios'
+// import api from '@/axios'
 
 const { TreeNode } = Tree
 const treeData = [{

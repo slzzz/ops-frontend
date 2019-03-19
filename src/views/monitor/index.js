@@ -26,12 +26,11 @@ class App extends Component {
   componentDidMount() {
     // 基于准备好的dom，初始化echarts实例
     this.showChart()
- 
 }
   showChart = () =>{
     var monitorChart = echarts.init(document.getElementById('monitor'));
     api.post('/api/monitor/getdata',{'ip': this.state.ip}).then(response =>{
-      console.log(response)
+      // console.log(response)
       var cpuarr = []
       for (var x in response.data.datas['cpu']){
         cpuarr.push(response.data.datas['cpu'][x].slice(0,-1))
@@ -42,7 +41,7 @@ class App extends Component {
       }
       var diskarr = []
       for (var i in response.data.datas['disk']){
-        console.log(response.data.datas['disk'][i].split(' '))
+        // console.log(response.data.datas['disk'][i].split(' '))
 
         diskarr.push(response.data.datas['disk'][i].split(' ')[1].slice(0,-1))
       }
@@ -98,24 +97,29 @@ class App extends Component {
     })
   }
   handleClick = (e) =>{
-    console.log(e.currentTarget.textContent)
+    // console.log(e.currentTarget.textContent)
     this.setState({
       ip: e.currentTarget.textContent
     })
-
     this.showChart()
   }
-
 
   render() {
     return (
       <div className="App">
-
-        <Card title="Monitor">
+        <div className="card">
+        <Card  title="Monitor">
           {arr.map((i) =>{
-            return <Card.Grid key={i} onClick={this.handleClick}  style={gridStyle}>{i}</Card.Grid>
+            return  <Card.Grid key={i}
+                onClick={this.handleClick}
+                style={gridStyle}
+                    >
+                    {i}
+                    </Card.Grid>
           })}
         </Card>
+        </div>
+
 
         {/* <div
             className="Output"
@@ -130,3 +134,4 @@ class App extends Component {
 }
 
 export default App;
+

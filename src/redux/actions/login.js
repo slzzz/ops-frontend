@@ -8,6 +8,7 @@ const login = params => dispatch => {
    **/
   return new Promise(reslove => {
     api.post('/login', params).then(res => {
+      console.log(res.data)
       // 账号密码正确，不发送第二次请求
       if (res.data.success) {
         //设置全局token并缓存token
@@ -16,6 +17,8 @@ const login = params => dispatch => {
           playload: res.data.datas.token
         })
         localStorage.setItem('token', res.data.datas.token)
+      }else{
+        message.error(res.data.message)
       }
       reslove(res.data.success)
     }).catch(function (error) {

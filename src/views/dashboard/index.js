@@ -4,7 +4,7 @@ import PanelGroup from './component/PanelGroup'
 import {raddarChartData,barChartData,pieChartData,lineChartData} from './chartData'
 import CommonChart from '@/components/chart'
 import LineChart from './component/LineChart'
-import AntdCard from './component/AntdCard'
+// import AntdCard from './component/AntdCard'
 
 
 class Dashboard extends Component {
@@ -14,7 +14,7 @@ class Dashboard extends Component {
   }
 
   handleSetLineChartData = type => {
-    this.setState({lineChartDataVal: lineChartData['type']})
+    this.setState({lineChartDataVal: lineChartData[type]})
   }
 
   render() {

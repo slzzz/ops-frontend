@@ -46,7 +46,6 @@ class Login extends Component {
     const {handleLogin} = this.props
     // 登录完成后 发送请求 调用接口获取用户信息
     this.setState({loading:true})
-    console.log(formVal)
     handleLogin(formVal).then(status => {
       this.setState({loading:false})
       status && this.getUserInfo()

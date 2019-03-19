@@ -1,7 +1,13 @@
 .App {
     text-align: center;
 }
+.card {
+    padding-bottom: 10px;
+}
 #monitor {
+
+    background-color: #ffffff;
+    padding-top: 10px;
     width: 100%;
     height: 400px;
 }
