@@ -82,7 +82,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://nemo-tree.github.io/react-antd-admin",
+  "homepage": "https://slzzz.github.io/ops-frontend",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"

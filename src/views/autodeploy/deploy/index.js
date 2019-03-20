@@ -95,7 +95,7 @@ class App extends Component {
       console.log('all bim')
     }else
     {
-      console.log('other')
+      console.log('other: ' +data)
     }
   }
 
